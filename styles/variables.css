@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root
+{
+    /* COLORS */
+    --body-bgcolor : #F8F4F1;
+
+    --general-fontcolor : #42382e;
+
+    --header-top-bgcolor : #E3C6B8;
+
+    --book-now-btn-bgcolor : transparent;
+    --book-now-btn-bgcolor-hoverANDfocus : #E3C6B8;
+    --book-now-btn-bgcolor-active : #E3C6B8;
+    --book-now-btn-bordercolor : #42382e;
+    --book-now-btn-fontcolor-active : #F8F4F1;
+    --book-now-sidebar-btn-bgcolor-active : #bd9792;
+
+    --burger-menu-bgcolor : #E3C6B8;
+    --burger-menu-line-bgcolor : #F8F4F1;
+
+    --links-fontcolor-hover :#CDA49F ;
+
+
+
+    /* FONT */
+    --general-font : "Montserrat", sans-serif;
+    --links-font : "Libre Baskerville", serif;
+}
