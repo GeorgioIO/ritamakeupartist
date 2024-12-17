@@ -16,6 +16,13 @@
     --book-now-btn-bordercolor : #42382e;
     --book-now-btn-fontcolor-active : #F8F4F1;
     --book-now-sidebar-btn-bgcolor-active : #bd9792;
+    /* ->HERO */
+    --HERO-book-now-btn-bgcolor-hoverANDfocus : #F8F4F1;
+    --HERO-book-now-btn-bgcolor-active : #F8F4F1;
+    --HERO-book-now-btn-bordercolor : #F8F4F1;
+    --HERO-book-now-btn-fontcolor : #F8F4F1;
+    --HERO-book-now-btn-fontcolor-active : #42382e;
+    --HERO-book-now-sidebar-btn-bgcolor-active : #F8F4F1;
 
     --burger-menu-bgcolor : #E3C6B8;
     --burger-menu-line-bgcolor : #F8F4F1;
@@ -24,6 +31,8 @@
     --sidebar-bordercolor : #42382e ;
     --sidebar-li-bordercolor : #42382e ;
 
+    --hero-title-fontcolor : #E8C7C2;
+
     --links-fontcolor-hover :#CDA49F ;
 
 
@@ -31,4 +40,5 @@
     /* FONT */
     --general-font : "Montserrat", sans-serif;
     --links-font : "Libre Baskerville", serif;
+    --hero-title-font : "Libre Baskerville", serif;
 }

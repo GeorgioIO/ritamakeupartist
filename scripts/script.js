@@ -1,4 +1,4 @@
-const bookButtons = document.querySelectorAll(".bookButton");
+const actionButtons = document.querySelectorAll(".actionButton");
 const burgerMenu = document.querySelector(".burger-menu");
 const CloseSidebarButton = document.querySelector(".close-sidebar");
 
@@ -7,7 +7,7 @@ const CloseSidebarButton = document.querySelector(".close-sidebar");
 burgerMenu.addEventListener("click", toggleSidebar);
 
 // -SUB EVENT LISTENER- HANDLE BOOK NOW BUTTON
-bookButtons.forEach(button => {
+actionButtons.forEach(button => {
     button.addEventListener("click" , () =>
     {
         button.classList.add("filled");
