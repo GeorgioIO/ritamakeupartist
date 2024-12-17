@@ -17,6 +17,7 @@ body
 {
     height: 100vh;
     background-color: var(--body-bgcolor);
+    overflow-x: hidden;
 
 }
 
@@ -148,7 +149,7 @@ nav > .book-btn-container
     font-weight: 900;
     color: var(--general-fontcolor);
     transition: all ease 0.5s;
-    font-size: clamp(1rem, 0.3rem + 1.5vw, 1.3rem);
+    font-size: clamp(0.6rem, 0.2rem + 1.05vw, 1.3rem);
 
 
 }
@@ -173,6 +174,7 @@ nav > .book-btn-container
     align-items: center;
     justify-content: center;
     gap: 5px;
+    cursor: pointer;
 }
 
 .burger-menu > .line
@@ -188,16 +190,23 @@ nav > .book-btn-container
     height: 100%;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -800px;
     background-color: #E3C6B8 ;
     min-width: 360px;
     width: 40%;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 30px 40px 30px;
     gap: 40px;
     border-right: 1px solid #42382e;
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+
+.sidebar.open
+{
+    left: 0;
 }
 
 .x-icon
@@ -305,17 +314,20 @@ transform: translateX(-50%) rotate(-45deg);
 
 @media (max-width: 516px)
 {
-    .top-header-contact > p > span
-    {
-        display: none;
-    }
+
 
 
 }
 
 /* xs */
 @media (max-width: 475px) 
-{
+{   
+    .top-header,
+    .main-header
+    {
+        padding: 10px 12px 10px 12px;
+    }
+
     .main-logo
     {
         width: 170px;
@@ -326,6 +338,14 @@ transform: translateX(-50%) rotate(-45deg);
     #sidebar
     {
         width: 100%;
+    }
+}
+
+@media (max-width:426px)
+{
+    .top-header-contact > p > span
+    {
+        display: none;
     }
 }
 

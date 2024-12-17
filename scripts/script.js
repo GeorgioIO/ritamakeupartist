@@ -31,7 +31,11 @@ CloseSidebarButton.addEventListener("click" , (event) => {
     if(sideBarDisplay === "flex")
     {
         burgerMenu.addEventListener("click", toggleSidebar);
-        sideBar.style.display = "none";
+        sideBar.style.animationName = "slideOut";
+
+        setTimeout(() => {
+            sideBar.style.display = "none";
+          }, 1100);
     }
 });
 
@@ -45,12 +49,20 @@ function toggleSidebar ()
 
     if(sideBarDisplay === "flex")
     {
-        
-        sideBar.style.display = "none";
+        sideBar.style.animationName = "slideOut";
+        // sideBar.style.display = "none";
+        setTimeout(() => {
+            sideBar.style.display = "none";
+          }, 1100);
     }
     else if(sideBarDisplay === "none")
     {
         burgerMenu.removeEventListener("click", toggleSidebar);
-        sideBar.style.display = "flex";
+        sideBar.style.display = "flex"
+        sideBar.style.animationName = "slideIn";
+
+
+        
+        
     }
 }
