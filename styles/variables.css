@@ -35,10 +35,14 @@
 
     --links-fontcolor-hover :#CDA49F ;
 
+    --sections-title-fontcolor : #42382e;
+    --sections-title-bgcolor : #F8F4F1;
+
 
 
     /* FONT */
     --general-font : "Montserrat", sans-serif;
     --links-font : "Libre Baskerville", serif;
     --hero-title-font : "Libre Baskerville", serif;
+    --sections-title-font : "Libre Baskerville", serif;
 }
