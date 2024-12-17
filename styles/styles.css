@@ -83,9 +83,10 @@ header
 
 .main-header > .main-logo
 {
+    min-width: 150px ;
+    min-height: 150px ;
     width: 200px;
     height: 200px;
-    flex-shrink: 0;
 }
 
 .main-logo > img 
@@ -352,10 +353,10 @@ transform: translateX(-50%) rotate(-45deg);
         padding: 10px 12px 10px 12px;
     }
 
-    .main-logo
+    .main-header > .main-logo
     {
-        width: 170px;
-        height: 170px;
+        width: 170px !important;
+        height: 170px !important;
     }
 
     /* SIDEBAR */
@@ -367,6 +368,13 @@ transform: translateX(-50%) rotate(-45deg);
 
 @media (max-width:426px)
 {
+    .main-logo
+    {
+        width: 150px;
+        height: 150px;
+    }
+
+
     .top-header-contact > p > span
     {
         display: none;
@@ -375,9 +383,14 @@ transform: translateX(-50%) rotate(-45deg);
 
 @media (max-width : 380px) 
 {
-    .main-header,
+    
     .top-header
     {
         padding: 10px 8px 10px 8px;
     }    
+
+    .main-header
+    {
+        padding: 0px 12px 12px 12px;
+    }
 }
