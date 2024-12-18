@@ -5,10 +5,13 @@
 {
     /* COLORS */
     --body-bgcolor : #F8F4F1;
+    --main-bgcolor : #F8F4F1;
+    --main-bgcolor-secondary : #E3C6B8;
+    --header-top-bgcolor : ;
 
     --general-fontcolor : #42382e;
 
-    --header-top-bgcolor : #E3C6B8;
+    
 
     --book-now-btn-bgcolor : transparent;
     --book-now-btn-bgcolor-hoverANDfocus : #E3C6B8;
@@ -39,6 +42,8 @@
 
     --sections-title-fontcolor : #42382e;
     --sections-title-bgcolor : #F8F4F1;
+
+    --work-img-bordercolor : #42382e;
 
 
 
