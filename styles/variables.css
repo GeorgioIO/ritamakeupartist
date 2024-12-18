@@ -14,6 +14,7 @@
     --book-now-btn-bgcolor-hoverANDfocus : #E3C6B8;
     --book-now-btn-bgcolor-active : #E3C6B8;
     --book-now-btn-bordercolor : #42382e;
+    --book-btn-fontcolor : #42382e ;
     --book-now-btn-fontcolor-active : #F8F4F1;
     --book-now-sidebar-btn-bgcolor-active : #bd9792;
     /* ->HERO */
@@ -30,6 +31,7 @@
     --sidebar-bgcolor : #E3C6B8 ;
     --sidebar-bordercolor : #42382e ;
     --sidebar-li-bordercolor : #42382e ;
+    
 
     --hero-title-fontcolor : #E8C7C2;
 

@@ -18,7 +18,7 @@ body
     height: 100vh;
     background-color: var(--body-bgcolor);
     overflow-x: hidden;
-    
+    z-index: 0;
 
 }
 
@@ -124,6 +124,7 @@ header
     font-weight: 900;
     font-family: var(--links-font);
     font-size: 17px;
+    color: var(--book-btn-fontcolor );
 }
 
 .book-btn-container button::after
@@ -226,7 +227,7 @@ header
     border-right: 1px solid var(--sidebar-bordercolor);
     animation-duration: 1s; 
     animation-fill-mode: forwards;
-    z-index: 5;
+    z-index: 100;
 }
 
 .sidebar.open
@@ -264,6 +265,8 @@ header
 transform: translateX(-50%) rotate(-45deg);
 }
 
+
+
 #sidebar > nav ul
 {
     display: flex;
@@ -276,7 +279,7 @@ transform: translateX(-50%) rotate(-45deg);
 {
     width: 100%;
     border-bottom:1px solid var(--sidebar-li-bordercolor) ;
-    padding: 0px 0px 8px 8px;
+    padding: 0px 8px 8px 8px;
 }
 
 #sidebar > nav ul li a
@@ -429,9 +432,7 @@ transform: translateX(-50%) rotate(-45deg);
 
 .about-body > .rita-photo-container
 {
-    min-width: 328px;
-    width: 40%;
-    height: 400px;
+    min-width: 400px;
     background-color: #42382e;
     border-radius: .75rem;
     /* temporary */
@@ -452,6 +453,7 @@ transform: translateX(-50%) rotate(-45deg);
     background-color: var(--sections-title-bgcolor);
     width: 100%;
     border-bottom: 2px solid #42382e;
+    z-index: 10;
 }
 
 .section-title > h1
@@ -473,7 +475,7 @@ transform: translateX(-50%) rotate(-45deg);
 .about-paragraph-container > p
 {
     font-size: clamp(0.7rem - 6px , 0.4rem + 1.7vw, 1.3rem);
-    line-height: 6vh;
+    line-height: 6.5vh;
     font-family: var(--general-font);
     font-weight: 500;
 
@@ -532,6 +534,22 @@ transform: translateX(-50%) rotate(-45deg);
     }
 }
 
+@media (max-width: 916px)
+{
+    /* ABOUT  */
+    .about-body
+    {
+        flex-direction: column;
+    }
+
+    .about-body > .rita-photo-container
+    {
+        min-width: 100%;
+        height: auto;
+        min-height: 500px;
+    }
+}
+
 @media (max-width:840px)
 {
     #hero
@@ -557,16 +575,7 @@ transform: translateX(-50%) rotate(-45deg);
         margin-top: 0;
     }
 
-    /* ABOUT  */
-    .about-body
-    {
-        flex-direction: column;
-    }
 
-    .about-body > .rita-photo-container
-    {
-        min-width: 100%;
-    }
 }
 
 /* md */
@@ -579,6 +588,13 @@ transform: translateX(-50%) rotate(-45deg);
     .top-header
     {
         padding: 10px 15px 10px 15px;
+    }
+
+    .makeup-logo
+    {
+        width: 100%;
+        height: auto;
+        max-height: 458px;
     }
 
 
@@ -609,6 +625,7 @@ transform: translateX(-50%) rotate(-45deg);
     /* SIDEBAR */
     #sidebar
     {
+        min-width: 100%;
         width: 100%;
     }
 
