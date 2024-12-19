@@ -11,8 +11,6 @@
 
     --general-fontcolor : #42382e;
 
-    
-
     --book-now-btn-bgcolor : transparent;
     --book-now-btn-bgcolor-hoverANDfocus : #E3C6B8;
     --book-now-btn-bgcolor-active : #E3C6B8;
@@ -22,6 +20,7 @@
     --book-now-sidebar-btn-bgcolor-active : #bd9792;
     /* ->HERO */
     --HERO-book-now-btn-bgcolor-hoverANDfocus : #F8F4F1;
+    --HERO-book-now-btn-fontcolor-hoverANDfocus : #42382e;
     --HERO-book-now-btn-bgcolor-active : #F8F4F1;
     --HERO-book-now-btn-bordercolor : #F8F4F1;
     --HERO-book-now-btn-fontcolor : #F8F4F1;
@@ -36,7 +35,7 @@
     --sidebar-li-bordercolor : #42382e ;
     
 
-    --hero-title-fontcolor : #E8C7C2;
+    --hero-title-fontcolor : #E8C7C2 ;
 
     --links-fontcolor-hover :#CDA49F ;
 
@@ -45,6 +44,10 @@
 
     --work-img-bordercolor : #42382e;
 
+    --service-card-bgcolor :#F8F4F1 ;
+    --service-card-fontcolor :#42382e ;
+    --service-card-linecolor : #977E65;
+    --service-card-linecolor-hover : white;
 
 
     /* FONT */

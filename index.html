@@ -48,7 +48,7 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <div class="book-btn-container">
-                    <button onclick="window.open('https://wa.me/96171683248' , '_blank');" class="actionButton">Book Now</button>
+                    <button onclick="delayedLink('https://wa.me/96171683248');" class="actionButton">Book Now</button>
                 </div>
             </nav>
             <div class="burger-menu">
@@ -73,7 +73,7 @@
             </ul>
         </nav>
         <div class="book-btn-container">
-            <button onclick="window.open('https://wa.me/96171683248' , '_blank');" class="actionButton">Book Now</button>
+            <button onclick="delayedLink('https://wa.me/96171683248');" class="actionButton">Book Now</button>
         </div>
     </section>
     <!-- HERO -->
@@ -81,7 +81,7 @@
         <div class="hero-texts">
             <div class="hero-titleANDdescription">
                 <h2>Rita Abou Nader</h2>
-                <p>Makeup artist and educator</p>
+                <p>Makeup artist and Instructor</p>
             </div>
             <div class="hero-quote">
                 <p><strong><i>Unlock your inner beauty</i></strong></p>
@@ -89,7 +89,7 @@
         </div>
         <div class="hero-buttons">
             <div class="book-btn-container">
-                <button onclick="window.open('https://wa.me/96171683248' , '_blank');" class="actionButton">Book Now</button>
+                <button  class="actionButton" onclick="delayedLink('https://wa.me/96171683248');">Book Now</button>
             </div>
             <div class="book-btn-container">
                 <button class="actionButton">Learn Now</button>
@@ -103,10 +103,12 @@
         </div>
         <div class="about-body">
             <div class="rita-photo-container">
-                personal photo
+                <img src="./images/rita-personal-photo.jpeg" alt="rita personal photo">
             </div>
             <div class="about-paragraph-container">
-                <p>Hi, I’m Rita, a professional makeup artist based in Lebanon, specializing in creating stunning, timeless looks for any occasion. From glamorous evening events to radiant everyday glows, I enhance natural beauty with precision and care. <strong><i>I also offer personalized 1-on-1 makeup sessions to teach you techniques tailored to your unique features and style</i></strong>, helping you gain confidence in your own makeup skills. Using trusted, high-quality products, I ensure every look is flawless and long-lasting—<strong>some brands I use:</strong></p>
+                <p>Hello, beautiful! <br>
+                    I’m Rita, a professional <strong>makeup artist</strong> based in North Lebanon, specializing in creating stunning, timeless looks for any occasion. From glamorous evening events to radiant everyday glows, I enhance natural beauty with precision and care. <br> <br> 
+                    <strong><i>I also offer personalized one-on-one makeup sessions</i></strong> to teach you techniques tailored to your unique features and style, helping you gain confidence in your makeup skills. Using trusted, high-quality products, I ensure that every look is flawless and long-lasting</p>
             </div>
         </div>
         <div class="makeup-brands">
@@ -121,6 +123,50 @@
             </div>
             <div class="makeup-logo">
                 <img src="./images/morphe-logo-nobg.png" alt="Morphe logo">
+            </div>
+        </div>
+    </section>
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="section-title">
+            <h1>Services :</h1>
+        </div>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service__header">
+                    <div class="service__header__icon">
+                        <img src="./images/makeup-service.png" alt="make up service icon">
+                    </div>
+                    <div class="service__header__title">
+                        <h2>Full Makeup with lashes</h2>
+                    </div>
+                </div>
+                <div class="service__line"></div>
+                <div class="service__info">
+                    <p class="service__info__description">Flawless full makeup with stunning lashes for a glamorous, polished look—perfect for any occasion!</p>
+                    <p class="service__info__price">For 20$</p>
+                </div>
+                <div class="book-btn-container">
+                    <button class="actionButton" onclick="delayedLink('https://wa.me/96171683248');">Book now</button>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service__header">
+                    <div class="service__header__icon">
+                        <img src="./images/makeup-course.png" alt="make up course icon">
+                    </div>
+                    <div class="service__header__title">
+                        <h2>Self-Makeup Course</h2>
+                    </div>
+                </div>
+                <div class="service__line"></div>
+                <div class="service__info">
+                    <p class="service__info__description">Master the art of makeup with a personalized self-makeup course. Learn techniques to create stunning looks effortlessly!</p>
+                    <p class="service__info__price">For 90$</p>
+                </div>
+                <div class="book-btn-container">
+                    <button class="actionButton">Learn more</button>
+                </div>
             </div>
         </div>
     </section>
@@ -153,5 +199,6 @@
             <button onclick="window.open('https://wa.me/96171683248' , '_blank');" class="actionButton">Book Now</button>
         </div>
     </section>
+
 </body>
 </html>

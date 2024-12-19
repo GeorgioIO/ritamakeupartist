@@ -65,4 +65,13 @@ function toggleSidebar ()
         
         
     }
+
+}
+
+// -SUB FUNCTIONS- FUNCTION FOR DELAYING LINK OPEN
+function delayedLink(linkLocation)
+{
+    setTimeout(() => {
+        window.open(link , "_blank")        
+    }, 100);
 }
