@@ -1,10 +1,34 @@
 const actionButtons = document.querySelectorAll(".actionButton");
 const burgerMenu = document.querySelector(".burger-menu");
 const CloseSidebarButton = document.querySelector(".close-sidebar");
+const upButton = document.querySelector(".upbutton");
+const appCheckBox = document.getElementById("appointment");
 
 
 // TITLE : EVENT LISTENERS
 burgerMenu.addEventListener("click", toggleSidebar);
+
+// -SUB EVENT LISTENER- HANDLE UP BUTTON
+upButton.addEventListener("click" , () => {
+    window.scroll({
+        top : 0,
+        behavior : 'smooth'
+    });
+})
+
+// -SUB EVENT LISTENER- HANDLE WHEN APPOINTMENT CHECK IS CHECKED
+appCheckBox.addEventListener("change" , (event) => {
+    const textArea = document.getElementById("note");
+    if(event.target.checked)
+    {
+        textArea.value = "";
+        textArea.value = "Add the time you want / notes..."
+    }
+    else
+    {
+        textArea.value = "";
+    }
+})
 
 // -SUB EVENT LISTENER- HANDLE BOOK NOW BUTTON
 actionButtons.forEach(button => {
@@ -75,3 +99,4 @@ function delayedLink(linkLocation)
         window.open(link , "_blank")        
     }, 100);
 }
+

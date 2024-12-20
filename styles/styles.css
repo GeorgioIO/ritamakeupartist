@@ -22,7 +22,7 @@ body
     background-color: var(--body-bgcolor);
     overflow-x: hidden;
     z-index: 0;
-
+    position: relative;
 }
 
 /* GENERAL STYLES */
@@ -31,6 +31,37 @@ strong:not(.hero-quote > strong)
     --strong : #42382e ;
     color: var(--strong);
 }
+
+button {
+    cursor: pointer;
+}
+
+/* UP BUTTON */
+.upbutton
+{
+    --bg-color : #796756;
+    z-index: 200;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 30px;
+    width: 45px;
+    height: 35px;
+    background-color: var(--bg-color);
+    border-top-left-radius:1rem ;
+    border-bottom-left-radius: 1rem;
+    outline: white 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upbutton > img{
+    width: 25px;
+    height: 25px;
+}
+
 /* HEADER */
 
 header
@@ -48,8 +79,6 @@ header
     align-items: center;
     justify-content: space-between;
 }
-
-
 
 .top-header p
 {
@@ -751,6 +780,7 @@ transform: translateX(-50%) rotate(-45deg);
 }
 
 #course > .course-section-title,
+#contact > .contact-section-title,
 .course-information h2
 {
     text-align: center;
@@ -758,6 +788,7 @@ transform: translateX(-50%) rotate(-45deg);
 
 }
 
+#contact > .contact-section-title p
 #course > .course-section-title p
 {
     font-size: 0.8rem;
@@ -768,7 +799,7 @@ transform: translateX(-50%) rotate(-45deg);
 .course-cards-container
 {
     display: flex;
-    width: 70%;
+    width: 75%;
     gap: 50px;
 }
 
@@ -851,7 +882,7 @@ transform: translateX(-50%) rotate(-45deg);
 .course-information
 {
     --secondary-fontcolor : #997d61;
-    width: 70%;
+    width: 75%;
     color: var(--secondary-fontcolor);
     display: flex;
     flex-direction: column;
@@ -902,13 +933,216 @@ transform: translateX(-50%) rotate(-45deg);
     background-color: var(--book-now-btn-bgcolor-active);
 }
 
+/* CONTACT */
+#contact
+{
+    background-color: var(--main-bgcolor-secondary);
+    width: 100%;
+    padding: 50px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    font-family: var(--general-font);
+    align-items: center;
+    color: var(--secondary-fontcolor);
+}
+
+.contact-information
+{
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-information > .contact-card
+{
+    --shadow : #8E8E8E;
+    --bg-color : #F8F4F1;
+
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 16px;
+    padding: 18px;
+    min-width: 250px;
+    border-radius: .65rem;
+    height: 250px;
+    box-shadow: 0px 0px 5px 0px var(--shadow);
+    transition: all ease-in 700ms;
+}
+
+.contact-card > .contact-card__header
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-card__header > .contact-card__header__icon
+{
+    width: 45px;
+    height: 45px;
+}
+
+.contact-card__header__icon > img 
+{
+    width: 100%;
+    height: 100%;
+}
+
+.contact-card__header > h3
+{
+    font-weight: bolder;
+}
+
+.contact-card__description
+{
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.contact-card:hover
+{
+    transform: scale(1.03)  translateX(-10px);
+}
+
+.form-container
+{
+    width: 75%;
+    height: auto;
+    display: flex;
+    --shadow : #8E8E8E;
+    box-shadow: 0px 0px 5px 0px var(--shadow);
+
+}
+.form-container > .location-container 
+{
+    width:45%;
+}
+
+.location-container > iframe
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.form-container > form{
+    --bg-color : #F8F4F1;
+    
+    width: 55%;
+    height: auto;    
+    background-color: var(--bg-color);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+form > .form__textField
+{
+    width: 100%;
+    height: 40px;
+}
+
+.form__textField > input,
+.form__textField-area > textarea
+{
+    --font-color : #b69b81;
+    --border-color : #b69b81;
+
+    width: 100%;
+    height: 100%;
+    font-family: var(--general-font);
+    padding: 10px;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border: 2px solid var(--border-color);
+    border-radius: 0.25rem;
+    color: var(--font-color);
+    font-weight: 600;
+    resize: none;
+}
+
+.form__textField
+{
+    width: 100%;
+}
+
+.form__services
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__services .form__checkboxes
+{
+    display: flex;
+    gap: 20px;
+}
+
+.form__textField-area
+{
+    width: 100%;
+    height: 70px;
+}
+
+form > .submitform-button-container
+{
+    width: 120px;
+    height: 30px;
+}
+
+
+.submitform-button-container > button
+{
+    --bg-color : #dab8a8;
+    --font-color : #F8F4F1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    border: none;
+    font-family: var(--general-font);
+    font-weight: bold;
+    color: var(--font-color);
+    border-radius: .85rem;
+    transition: all ease-in 100ms;
+}
+
+.submitform-button-container > button:active
+{
+    --border-color : #42382e;
+    border: 2px solid var(--border-color);
+}
 /* MEDIA QUERIES */
 
 /* 2xl */
 @media (max-width: 1536px) {}
 
 /* xl */
-@media (max-width: 1280px) {}
+@media (max-width: 1284px) 
+{
+    .form__services
+    {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .form__services .form__checkboxes
+    {
+        flex-direction: column;
+    }
+}
 
 /* lg */
 @media (max-width: 1024px) 
@@ -941,6 +1175,12 @@ transform: translateX(-50%) rotate(-45deg);
     {
         width: 360px;
         height: 360px;
+    }
+
+    /* CONTACT */
+    .form-container
+    {
+        width: 85%;
     }
 }
 
@@ -983,6 +1223,30 @@ transform: translateX(-50%) rotate(-45deg);
     {
         width: 100%;
     }
+
+    /* CONTACT */
+    #contact
+    {
+        flex-direction: column-reverse;
+    }
+    .contact-section-title
+    {
+        order: 1;
+    }
+
+    .form-container,
+    .contact-information
+    {
+        width: 100%;
+    }
+
+    .contact-card
+    {
+        min-height: 300px;
+        width: 300px;
+        height: 300px;
+    }
+
 }
 
 @media (max-width:840px)
@@ -1017,6 +1281,36 @@ transform: translateX(-50%) rotate(-45deg);
         height: auto;        
     }
 
+    /* CONTACT */
+    .form-container
+    {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form-container > .location-container
+    {
+        height: 400px;
+        width: 100%; 
+    }
+
+    .form-container > form 
+    {
+        width: 100%;
+    }
+
+    .form__services
+    {
+        justify-content: space-between;
+        
+    }
+
+    .form__services .form__checkboxes
+    {
+        flex-direction: row;
+        gap: 30px;
+    }
+
 
 }
 
@@ -1031,7 +1325,8 @@ transform: translateX(-50%) rotate(-45deg);
     /* COURSE */
 
     .course-cards-container,
-    .course-information
+    .course-information,
+    .dummy-btn-container
     {
         width: 100%;
     }
@@ -1061,8 +1356,25 @@ transform: translateX(-50%) rotate(-45deg);
         max-height: 458px;
     }
 
+    /* CONTACT */
+    .form__services
+    {
+        justify-content: flex-start;
+        gap: 30px;
 
+    }
 
+    .form__services .form__checkboxes
+    {
+        flex-direction: column;
+    }
+
+    .contact-card
+    {
+        min-height: 250px;
+        width: 250px;
+        height: 250px;
+    }
 
 }
 
@@ -1079,6 +1391,11 @@ transform: translateX(-50%) rotate(-45deg);
     .course-information > ul > li h3.course-perk__title
     {
         font-size: 18px;
+    }
+
+    #course .book-btn-container
+    {
+        width: 100%;
     }
 
 
@@ -1127,7 +1444,8 @@ transform: translateX(-50%) rotate(-45deg);
     #about-me,
     #portfolio,
     #services,
-    #course
+    #course,
+    #contact
     {
         padding: 50px 20px 50px 20px;
     }
@@ -1142,8 +1460,12 @@ transform: translateX(-50%) rotate(-45deg);
         font-size: 2rem;
     }
 
-    /* SERVICES */
+    /* CONTACT */
+    .form__services
+    {
+        gap: 10px;
 
+    }
 }
 
 @media (max-width:426px)
@@ -1165,6 +1487,17 @@ transform: translateX(-50%) rotate(-45deg);
     .hero-buttons
     {
         gap: 20px;
+    }
+
+    /* CONTACT */
+    .form-container > form 
+    {
+        padding: 60px 20px 60px 20px;
+    }
+
+    .form__services
+    {
+        gap: 25px;
     }
 }
 
@@ -1210,5 +1543,16 @@ transform: translateX(-50%) rotate(-45deg);
     {
     
         font-size: 2.45rem;
+    }
+
+    /* CONTACT */
+    .form__services > label
+    {
+        display: none;
+    }
+
+    .form__services > div > label
+    {
+        font-size: 1.1rem;
     }
 }
