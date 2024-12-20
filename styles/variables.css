@@ -7,9 +7,9 @@
     --body-bgcolor : #F8F4F1;
     --main-bgcolor : #F8F4F1;
     --main-bgcolor-secondary : #E3C6B8;
-    --header-top-bgcolor : ;
 
     --general-fontcolor : #42382e;
+    --secondary-fontcolor : #977E65;
 
     --book-now-btn-bgcolor : transparent;
     --book-now-btn-bgcolor-hoverANDfocus : #E3C6B8;
@@ -49,6 +49,7 @@
     --service-card-linecolor : #977E65;
     --service-card-linecolor-hover : white;
 
+    --course-card-fontcolor : #977E65;
 
     /* FONT */
     --general-font : "Montserrat", sans-serif;

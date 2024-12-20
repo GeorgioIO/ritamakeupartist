@@ -41,10 +41,10 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Course</a></li>
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Work</a></li>
+                    <li><a href="#course">Course</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <div class="book-btn-container">
@@ -196,9 +196,91 @@
             </div>
         </div>
         <div class="book-btn-container">
-            <button onclick="window.open('https://wa.me/96171683248' , '_blank');" class="actionButton">Book Now</button>
+            <button onclick="delayedLink('https://wa.me/96171683248');" class="actionButton">Book Now</button>
         </div>
     </section>
+    <!-- COURSE SECTION -->
+    <section id="course">
+        <div class="course-section-title">
+            <h2>Learn more about my Self-Makeup course</h2>
+            <p>All the makeup products will be provided by my during our sessions*</p>
+        </div>
 
+        <div class="course-cards-container">
+            <div class="course-card">
+                <div class="course-card__header">
+                    <div class="course-card__icon">
+                        <img src="./images/icons8-clock-50.png" alt="course duration">
+                    </div>
+                    <div class="course-card__header__title">
+                        <h3>Course duration</h3>
+                    </div>
+                </div>
+                <div class="course-card__description">
+                    <p>3 days , with 2 hours of fun each session</p>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-card__header">
+                    <div class="course-card__icon">
+                        <img src="./images/icons8-today-50.png" alt="Flexible timing">
+                    </div>
+                    <div class="course-card__header_title">
+                        <h3>Flexible timing</h3>
+                    </div>
+                </div>
+                <div class="course-card__description">
+                    <p>We'll work together to find a schedule that suits you</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-information">
+            <h2>What you will learn :</h2>
+            <ul>
+                <li class="course-perk">    
+                    <div class="course-perk__icon">
+                        <img src="./images/course-point-1.png" alt="course perk one">
+                    </div>
+                    <h3 class="course-perk__title">The basics of makeup application.</h3>
+                </li>
+                <li class="course-perk">
+                    <div class="course-perk__icon">
+                        <img src="./images/course-point-2.png" alt="course perk two">
+                    </div>
+                    <h3 class="course-perk__title">How to choose products that suit your skin type and tone.</h3>
+                </li>
+                <li class="course-perk">
+                    <div class="course-perk__icon">
+                        <img src="./images/course-point-3.png" alt="course perk three">
+                    </div>
+                    <h3 class="course-perk__title">Tips for selecting the right products for you.</h3>
+                </li>
+                <li class="course-perk">
+                    <div class="course-perk__icon">
+                        <img src="./images/course-point-4.png" alt="course perk four">
+                    </div>
+                    <h3 class="course-perk__title">Techniques for creating a flawless base.</h3>
+                </li>
+                <li class="course-perk">
+                    <div class="course-perk__icon">
+                        <img src="./images/course-point-5.png" alt="course perk five">
+                    </div>
+                    <h3 class="course-perk__title">A step-by-step guide to a simple everyday eyeshadow look.</h3>
+                </li>
+                <li class="course-perk">
+                    <div class="course-perk__icon">
+                        <img src="./images/course-point-6.png" alt="course perk six">
+                    </div>
+                    <h3 class="course-perk__title">How to elevate your look for special occasions.</h3>
+                </li>
+            </ul>
+        </div>
+        <div class="dummy-btn-container">
+            <div class="book-btn-container">
+                <button onclick="delayedLink('https://wa.me/96171683248');" class="actionButton">Apply now for 90$</button>
+            </div>    
+        </div>
+        </section>
 </body>
 </html>

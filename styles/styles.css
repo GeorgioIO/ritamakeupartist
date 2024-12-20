@@ -13,6 +13,7 @@
 html
 {
     font-size: 18px;
+    scroll-behavior: smooth;
 }
 
 body
@@ -621,9 +622,13 @@ transform: translateX(-50%) rotate(-45deg);
     --line-color : white;
 }
 
+.service-card img
+{
+    transition: filter 700ms ease-in;
+}
+
 .service-card:hover img {
     filter: brightness(0) invert(1); /* Changes the image color to white */
-    transition: filter 0.3s ease;
 }
 
 .service-card > .book-btn-container
@@ -719,13 +724,183 @@ transform: translateX(-50%) rotate(-45deg);
     transform: scale(1.05);
 }
 
-.book-btn-container
+#portfolio .book-btn-container
 {
     align-self: center;
 }
 
+#portfolio .book-btn-container button::after
+{
+    --book-now-btn-bgcolor-active : #b69b81;
+    background-color: var(--book-now-btn-bgcolor-active);
+}
 
 
+/* COURSE */
+#course
+{
+    background-color: var(--main-bgcolor);
+    width: 100%;
+    padding: 50px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    font-family: var(--links-font);
+    align-items: center;
+}
+
+#course > .course-section-title,
+.course-information h2
+{
+    text-align: center;
+    color: var(--sections-title-fontcolor);
+
+}
+
+#course > .course-section-title p
+{
+    font-size: 0.8rem;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+.course-cards-container
+{
+    display: flex;
+    width: 70%;
+    gap: 50px;
+}
+
+.course-cards-container > .course-card
+{
+    --shadow : #8E8E8E;
+
+    box-shadow: 0px 0px 5px 0px var(--shadow);
+    border-radius: .45rem;
+    padding: 16px 5px 16px 25px;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--course-card-fontcolor);
+    transition: all ease-in 700ms;
+}
+
+.course-card > .course-card__header
+{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.1rem;
+   
+}
+
+.course-card__header  h3
+{
+    font-weight: 900;
+}
+
+.course-card .course-card__icon
+{
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+}
+
+.course-card__icon > img
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+.course-card > .course-card__description
+{
+    padding-left: 60px;
+    width: 100%;
+}
+
+.course-card__description > p
+{
+    width: 100%;
+    font-weight: 300;
+}
+
+.course-card:hover
+{
+    --bg-color : #E3C6B8;
+    --font-color : white;
+
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    transform: scale(1.03);
+}
+
+.course-card img
+{
+    transition: filter ease-in 700ms;
+}
+
+.course-card:hover img
+{
+    filter: brightness(0) invert(1);
+}
+
+.course-information
+{
+    --secondary-fontcolor : #997d61;
+    width: 70%;
+    color: var(--secondary-fontcolor);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.course-information h2
+{
+    text-align: left;
+}
+
+.course-information > ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+}
+
+.course-information > ul > li
+{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.dummy-btn-container
+{
+    width: 70%;
+}
+
+#course .book-btn-container
+{
+    width: 200px;
+    height: 60px;
+    align-self: flex-start;
+}
+
+#course .book-btn-container button
+{
+    padding: 10px;
+}
+
+#course .book-btn-container button::after
+{
+    --book-now-btn-bgcolor-active : #b69b81;
+    background-color: var(--book-now-btn-bgcolor-active);
+}
 
 /* MEDIA QUERIES */
 
@@ -795,6 +970,19 @@ transform: translateX(-50%) rotate(-45deg);
         height: 330px;
         
     }
+
+    /* COURSE */
+    .course-cards-container
+    {
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .course-cards-container > .course-card
+    {
+        width: 100%;
+    }
 }
 
 @media (max-width:840px)
@@ -840,6 +1028,20 @@ transform: translateX(-50%) rotate(-45deg);
         flex-wrap: wrap;
     }
 
+    /* COURSE */
+
+    .course-cards-container,
+    .course-information
+    {
+        width: 100%;
+    }
+    .course-information > ul
+    {
+        gap: 30px;
+        width: 100%;
+        
+    }
+
     
 }
 
@@ -860,16 +1062,25 @@ transform: translateX(-50%) rotate(-45deg);
     }
 
 
+
+
 }
 
 @media (max-width: 516px)
 {
-
+    /* SERVICES */
     .service__header > .service__header__title
     {
         font-size: 0.7rem;
 
     }
+
+    /* COURSE */
+    .course-information > ul > li h3.course-perk__title
+    {
+        font-size: 18px;
+    }
+
 
 }
 
@@ -915,7 +1126,8 @@ transform: translateX(-50%) rotate(-45deg);
     /* ABOUT */
     #about-me,
     #portfolio,
-    #services
+    #services,
+    #course
     {
         padding: 50px 20px 50px 20px;
     }
