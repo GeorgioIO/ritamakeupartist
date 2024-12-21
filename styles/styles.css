@@ -1011,6 +1011,11 @@ transform: translateX(-50%) rotate(-45deg);
     font-weight: 500;
 }
 
+.contact-card__description > ul
+{
+    list-style-type: none;
+}
+
 .contact-card:hover
 {
     transform: scale(1.03)  translateX(-10px);
@@ -1157,6 +1162,58 @@ footer > .main-logo > img
 .bottom-header-social-container
 {
     gap: 20px;
+}
+
+/* SUCCESS */
+main#success
+{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+#success > p
+{
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: var(--general-font);
+    color: var(--general-fontcolor );
+    padding: 20px;
+}
+
+#success > .go-back-btn
+{
+    width: 120px;
+}
+
+.go-back-btn > button
+{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 0.75em;
+    border: 2px solid var(--general-fontcolor );
+    border-radius: 0.65rem;
+
+    transition: all ease-in 700ms;
+}
+
+.go-back-btn > button > a
+{
+    color: var(--general-fontcolor );
+    font-family: var(--general-font);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+.go-back-btn > button:focus
+{
+    box-shadow: inset 0px 0px 2px 2px grey;
 }
 
 
