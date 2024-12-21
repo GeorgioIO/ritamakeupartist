@@ -3,7 +3,8 @@ const burgerMenu = document.querySelector(".burger-menu");
 const CloseSidebarButton = document.querySelector(".close-sidebar");
 const upButton = document.querySelector(".upbutton");
 const appCheckBox = document.getElementById("appointment");
-
+const locationSwitchers = document.querySelectorAll(".locationSwitcher");
+console.log(locationSwitchers)
 
 // TITLE : EVENT LISTENERS
 burgerMenu.addEventListener("click", toggleSidebar);
@@ -14,6 +15,29 @@ upButton.addEventListener("click" , () => {
         top : 0,
         behavior : 'smooth'
     });
+})
+
+// -SUB EVENT LISTENER- HANDLE LOCATION SWITCHER
+locationSwitchers.forEach(switcher => {
+    switcher.addEventListener("click" , (event) => {
+        let location = event.target.id;
+        if(location === "ehdenLocation")
+        {
+            console.log(1);
+            document.querySelector("#ehdenLocation").classList.toggle("active-location");
+            document.querySelector("#mejdlayaLocation").classList.toggle("active-location");
+            document.querySelector("#ehdenFrame").style.display = "block";
+            document.querySelector("#mejdlayaFrame").style.display = "none";
+        }
+        else if(location === "mejdlayaLocation")
+        {
+            console.log(2)
+            document.querySelector("#mejdlayaLocation").classList.toggle("active-location");
+            document.querySelector("#ehdenLocation").classList.toggle("active-location");
+            document.querySelector("#mejdlayaFrame").style.display = "block";
+            document.querySelector("#ehdenFrame").style.display = "none";
+        }
+    })
 })
 
 // -SUB EVENT LISTENER- HANDLE WHEN APPOINTMENT CHECK IS CHECKED
