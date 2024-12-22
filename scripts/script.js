@@ -4,7 +4,6 @@ const CloseSidebarButton = document.querySelector(".close-sidebar");
 const upButton = document.querySelector(".upbutton");
 const appCheckBox = document.getElementById("appointment");
 const locationSwitchers = document.querySelectorAll(".locationSwitcher");
-console.log(locationSwitchers)
 
 // TITLE : EVENT LISTENERS
 burgerMenu.addEventListener("click", toggleSidebar);
@@ -54,17 +53,7 @@ appCheckBox.addEventListener("change" , (event) => {
     }
 })
 
-// -SUB EVENT LISTENER- HANDLE BOOK NOW BUTTON
-actionButtons.forEach(button => {
-    button.addEventListener("click" , () =>
-    {
-        button.classList.add("filled");
-    
-        setTimeout(function(){
-            window.location.href = "https://google.com";
-        },500);
-    })   
-})
+
 
 
 // -SUB EVENT LISTENERS- HANDLER TO CLOSE THE SIDEBAR
@@ -88,6 +77,21 @@ CloseSidebarButton.addEventListener("click" , (event) => {
 });
 
 // TITLE : FUNCTIONS
+
+// -SUB FUNCTIONS- FUNCTION FOR DELAYING LINK OPEN
+function delayedLink(linkLocation)
+{
+    actionButtons.forEach(button => {
+        button.addEventListener("click" , () =>
+        {
+            button.classList.add("filled");
+        
+            setTimeout(function(){
+                window.location.href = linkLocation;
+            },100);
+        })   
+    })
+}
 
 // -SUB FUNCTIONS- FUNCTION FOR THE BURGER MENU
 function toggleSidebar ()
@@ -116,11 +120,5 @@ function toggleSidebar ()
 
 }
 
-// -SUB FUNCTIONS- FUNCTION FOR DELAYING LINK OPEN
-function delayedLink(linkLocation)
-{
-    setTimeout(() => {
-        window.open(linkLocation)        
-    }, 100);
-}
+
 
