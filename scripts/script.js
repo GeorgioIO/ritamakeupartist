@@ -107,7 +107,9 @@ function delayedLink(linkLocation)
             setTimeout(function(){
                 window.location.href = linkLocation;
             },100);
-        })   
+        })
+        
+        this.blur();
     })
 }
 
