@@ -120,7 +120,7 @@ function toggleSidebar ()
 function delayedLink(linkLocation)
 {
     setTimeout(() => {
-        window.open(link , "_blank")        
+        window.open(linkLocation)        
     }, 100);
 }
 
