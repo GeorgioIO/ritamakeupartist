@@ -4,6 +4,7 @@ const CloseSidebarButton = document.querySelector(".close-sidebar");
 const upButton = document.querySelector(".upbutton");
 const appCheckBox = document.getElementById("appointment");
 const locationSwitchers = document.querySelectorAll(".locationSwitcher");
+const sidebarLinks = document.querySelectorAll("#sidebar-link");
 
 // TITLE : EVENT LISTENERS
 burgerMenu.addEventListener("click", toggleSidebar);
@@ -75,6 +76,23 @@ CloseSidebarButton.addEventListener("click" , (event) => {
           }, 1100);
     }
 });
+
+sidebarLinks.forEach(link => {
+    const sideBar = document.querySelector("#sidebar");
+    link.addEventListener("click" , (event) => {
+        let sideBarDisplay = window.getComputedStyle(sideBar).display;
+
+        if(sideBarDisplay === "flex")
+        {
+            burgerMenu.addEventListener("click", toggleSidebar);
+            sideBar.style.animationName = "slideOut";
+    
+            setTimeout(() => {
+                sideBar.style.display = "none";
+              }, 1100);
+        }
+    })
+})
 
 // TITLE : FUNCTIONS
 
