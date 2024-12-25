@@ -54,7 +54,14 @@ appCheckBox.addEventListener("change" , (event) => {
     }
 })
 
-
+// -SUB EVENT LISTENERS -
+actionButtons.forEach(button => {
+    button.addEventListener("click" , function(){
+        this.classList.add("filled")
+        
+        window.location.href = this.getAttribute("data-link");
+    })
+}) 
 
 
 // -SUB EVENT LISTENERS- HANDLER TO CLOSE THE SIDEBAR
@@ -100,17 +107,9 @@ sidebarLinks.forEach(link => {
 function delayedLink(linkLocation)
 {
     actionButtons.forEach(button => {
-        button.addEventListener("click" , () =>
-        {
-            button.classList.add("filled");
-        
-            setTimeout(function(){
-                window.location.href = linkLocation;
-            },100);
-        })
-        
-        this.blur();
-    })
+        button.setAttribute('data-link', linkLocation);
+    });
+    
 }
 
 // -SUB FUNCTIONS- FUNCTION FOR THE BURGER MENU
