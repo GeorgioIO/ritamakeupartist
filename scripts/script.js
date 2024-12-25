@@ -23,7 +23,6 @@ locationSwitchers.forEach(switcher => {
         let location = event.target.id;
         if(location === "ehdenLocation")
         {
-            console.log(1);
             document.querySelector("#ehdenLocation").classList.toggle("active-location");
             document.querySelector("#mejdlayaLocation").classList.toggle("active-location");
             document.querySelector("#ehdenFrame").style.display = "block";
@@ -31,7 +30,6 @@ locationSwitchers.forEach(switcher => {
         }
         else if(location === "mejdlayaLocation")
         {
-            console.log(2)
             document.querySelector("#mejdlayaLocation").classList.toggle("active-location");
             document.querySelector("#ehdenLocation").classList.toggle("active-location");
             document.querySelector("#mejdlayaFrame").style.display = "block";
@@ -59,7 +57,14 @@ actionButtons.forEach(button => {
     button.addEventListener("click" , function(){
         this.classList.add("filled")
         
+
+    
         window.location.href = this.getAttribute("data-link");
+
+        // This remove focus from blur once its clicked
+        setTimeout(() => {
+            this.classList.remove("filled");
+        },2000)
     })
 }) 
 
